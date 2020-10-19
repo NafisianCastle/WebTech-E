@@ -1,7 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
-    <body>
-        <h1>Form</h1>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      .form {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 150px;
+        margin-right: 150px;
+        background-color: beige;
+      }
+      .red {
+        color: red;
+      }
+      .step {
+        padding-right: 20px;
+      }
+      .label {
+        float: left;
+        width: 30%;
+        text-align: end;
+        width: 30%;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+      .input {
+        text-align: start;
+        width: 70%;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="form">
+      <p><span class="red">*</span>- denotes required information</p>
+      <h4>
+        <span class="step"> > 1 Donation</span>
+        <span class="step">> 2 Confirmation</span>> 3 Thank You
+      </h4>
+      <h2 class="red">Donor information</h2>
+      <div class="label">
+        <label for="firstName">First Name<span class="red"> *</span></label><br>
+               <label for="firstName">First Name<span class="red"> *</span></label><br>
+        <label for="firstName">First Name<span class="red"> *</span></label><br>
+        <label for="firstName">First Name<span class="red"> *</span></label><br>
+        <label for="firstName">First Name<span class="red"> *</span></label><br>
+        <label for="firstName">First Name<span class="red"> *</span></label><br>
+        <label for="firstName">First Name<span class="red"> *</span></label><br>
+        <label for="firstName">First Name<span class="red"> *</span></label><br>
+        <label for="firstName">First Name<span class="red"> *</span></label><br>
+        <label for="firstName">First Name<span class="red"> *</span></label><br>
+
+      </div>
+      <div class="input">
+        <input type="text" size="50px" id="firstName" name="firstName" />
+        <input type="text" size="50px" id="firstName" name="firstName" />
+        <input type="text" size="50px" id="firstName" name="firstName" />
+        <input type="text" size="50px" id="firstName" name="firstName" />
+        <input type="text" size="50px" id="firstName" name="firstName" />
+        <input type="text" size="50px" id="firstName" name="firstName" />
+        <input type="text" size="50px" id="firstName" name="firstName" />
+        <input type="text" size="50px" id="firstName" name="firstName" />
+      </div>
+    </form>
+  </body>
 </html>
