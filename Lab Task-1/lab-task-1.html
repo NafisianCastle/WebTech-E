@@ -17,13 +17,21 @@
       color: red;
     }
 
+    .header {
+      color: red;
+      font-size: x-large;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
     .step {
       padding-right: 25px;
     }
 
     .left {
-      width: 40%;
+      width: 280px;
       text-align: end;
+      align-items: flex-startS;
       font-weight: bold;
       padding-right: 5px;
       padding-bottom: 1px;
@@ -48,7 +56,7 @@
       <span class="step"> > 1 Donation</span>
       <span class="step">> 2 Confirmation</span>> 3 Thank You
     </h4>
-    <h2 class="red">Donor information</h2>
+    <p class="header">Donor information</p>
     <table>
       <tr>
         <td class="left">
@@ -184,13 +192,13 @@
           <input type="checkbox" id="check" name="check" value="check">
           <label class="normal" for="check"> I am interested in giving on a regular basis.</label><br>
           <label class="normal" for="card">Monthly Credit Card $</label>
-          <input class="input" size="2px" type="number" id="card" name="card" />
+          <input class="input" size="1px" type="number" id="card" name="card" />
           <label class="normal" for="month"> For </label>
           <input class="input" size="1px" type="number" id="month" name="month" /><span class="normal">Months</span>
         </td>
       </tr>
     </table>
-    <h2 class="red">Honorarium and Memorial Donation Information</h2>
+    <p class="header">Honorarium and Memorial Donation Information</p>
     <table>
       <tr>
         <td class="left">
@@ -256,7 +264,7 @@
         </td>
       </tr>
     </table>
-    <h2 class="red">Additional Information</h2>
+    <p class="header">Additional Information</p>
     <p>Please enter your name, company or organization as you would like to appear in our publications:</p>
     <table>
       <tr>
@@ -273,16 +281,62 @@
     <input type="checkbox" id="gift" name="info" value="gift">
     <label for="gift"> My employer offers a matching gift program. I will mail the matching gift form.</label><br>
     <input type="checkbox" id="letter" name="info" value="letter">
-    <label for="letter"> Please save the cost of acknowledging this gift by not mailing a thank you letter.</label><br>
+    <label for="letter"> Please save the cost of acknowledging this gift by not mailing a thank you
+      letter.</label>
     <table>
-      <td class="left">
-        <label for="comment">Comments<span class="normal"><br />(Please type any questions or feedback
-            here.)</span></label>
-      </td>
-      <td class="right">
-        <textarea type="text" id="comment" name="area" value=""></textarea>
-      </td>
+      <tr>
+        <td class="left">
+          <label for="comment">Comments<span class="normal"><br />(Please type any questions or feedback
+              here.)</span></label>
+        </td>
+        <td class="right">
+          <textarea id="comment" name="area" rows="4" cols="50"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td class="left">
+          <label for="contact">How may we contact you?</label>
+        </td>
+        <td class="right">
+          <input type="checkbox" id="email" name="info" value="anonymous">
+          <label for="email"> Email </label><br>
+          <input type="checkbox" id="gift" name="info" value="gift">
+          <label for="gift"> Postal Mail</label><br>
+          <input type="checkbox" id="letter" name="info" value="letter">
+          <label for="letter"> Telephone</label><br>
+          <input type="checkbox" id="letter" name="info" value="letter">
+          <label for="letter"> Fax</label><br>
+        </td>
+      </tr>
     </table>
+    <p>I would like to receive newsletters and information about social events by:</p>
+    <table>
+      <tr>
+        <td class="left"></td>
+        <td class="right">
+          <input type="checkbox" id="email" name="info" value="anonymous">
+          <label for="email"> Email </label><br>
+          <input type="checkbox" id="gift" name="info" value="gift">
+          <label for="gift"> Postal Mail</label><br>
+      </tr>
+    </table>
+    <input type="checkbox" id="volunteer" name="volunteer" value="">
+    <label for="volunteer"> I would like information volunteering with the . </label><br>
+    <table style="background-color: white; width: 100%;">
+      <tr>
+        <td>
+          <p></p>
+        </td>
+      </tr>
+    </table>
+    <div style="text-align: center ;">
+      <span class="step"><input type="reset" value="Reset"></span>
+      <input type="submit" value="Submit">
+    </div>
+    <div class="normal">
+      <p>Donate online with confidence. You are on a secure server. &#128578</p>
+      <p>If you have any problem or questions, Please contact &#128073<span style="color:blue;"><u>support</u></span></p>
+    </div>
   </form>
 </body>
 <footer>
