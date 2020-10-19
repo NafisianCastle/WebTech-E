@@ -1,66 +1,291 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <style>
-      .form {
-        padding-left: 20px;
-        padding-right: 20px;
-        margin-left: 150px;
-        margin-right: 150px;
-        background-color: beige;
-      }
-      .red {
-        color: red;
-      }
-      .step {
-        padding-right: 20px;
-      }
-      .label {
-        float: left;
-        width: 30%;
-        text-align: end;
-        width: 30%;
-        font-weight: bold;
-        margin-right: 10px;
-      }
-      .input {
-        text-align: start;
-        width: 70%;
-      }
-    </style>
-  </head>
-  <body>
-    <form class="form">
-      <p><span class="red">*</span>- denotes required information</p>
-      <h4>
-        <span class="step"> > 1 Donation</span>
-        <span class="step">> 2 Confirmation</span>> 3 Thank You
-      </h4>
-      <h2 class="red">Donor information</h2>
-      <div class="label">
-        <label for="firstName">First Name<span class="red"> *</span></label><br>
-               <label for="firstName">First Name<span class="red"> *</span></label><br>
-        <label for="firstName">First Name<span class="red"> *</span></label><br>
-        <label for="firstName">First Name<span class="red"> *</span></label><br>
-        <label for="firstName">First Name<span class="red"> *</span></label><br>
-        <label for="firstName">First Name<span class="red"> *</span></label><br>
-        <label for="firstName">First Name<span class="red"> *</span></label><br>
-        <label for="firstName">First Name<span class="red"> *</span></label><br>
-        <label for="firstName">First Name<span class="red"> *</span></label><br>
-        <label for="firstName">First Name<span class="red"> *</span></label><br>
 
-      </div>
-      <div class="input">
-        <input type="text" size="50px" id="firstName" name="firstName" />
-        <input type="text" size="50px" id="firstName" name="firstName" />
-        <input type="text" size="50px" id="firstName" name="firstName" />
-        <input type="text" size="50px" id="firstName" name="firstName" />
-        <input type="text" size="50px" id="firstName" name="firstName" />
-        <input type="text" size="50px" id="firstName" name="firstName" />
-        <input type="text" size="50px" id="firstName" name="firstName" />
-        <input type="text" size="50px" id="firstName" name="firstName" />
-      </div>
-    </form>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>Lab Task 1</title>
+  <style>
+    .form {
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-left: 135px;
+      margin-right: 135px;
+      background-color: beige;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .step {
+      padding-right: 25px;
+    }
+
+    .left {
+      width: 40%;
+      text-align: end;
+      font-weight: bold;
+      padding-right: 5px;
+      padding-bottom: 1px;
+    }
+
+    .right {
+      width: 60%;
+      align-items: flex-start;
+    }
+
+    .normal {
+      font-weight: normal;
+      font-size: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <form class="form">
+    <p><span class="red">*</span>- denotes required information</p>
+    <h4>
+      <span class="step"> > 1 Donation</span>
+      <span class="step">> 2 Confirmation</span>> 3 Thank You
+    </h4>
+    <h2 class="red">Donor information</h2>
+    <table>
+      <tr>
+        <td class="left">
+          <label for="firstName">First Name<span class="red"> *</span></label>
+        </td>
+        <td class="right">
+          <input class="input" type="text" size="35px" id="firstName" name="firstName" required />
+        </td>
+      </tr>
+      <tr>
+        <td class="left">
+          <label for="lastName">Last Name<span class="red"> *</span></label>
+        </td>
+        <td class="right">
+          <input class="input" type="text" size="35px" id="lastName" name="lastName" required />
+        </td>
+      </tr>
+      <tr>
+        <td class="left">
+          <label for="company">Company </label>
+        </td>
+        <td class="right">
+          <input class="input" type="text" size="35px" id="company" name="company" />
+        </td>
+      </tr>
+      <tr>
+        <td class="left">
+          <label for="address1">Address 1<span class="red"> *</span></label>
+        </td>
+        <td class="right">
+          <input class="input" type="text" size="35px" id="address1" name="address1" required />
+        </td>
+      </tr>
+      <tr>
+        <td class="left">
+          <label for="address2">Address 2</label>
+        </td>
+        <td class="right">
+          <input class="input" type="text" size="35px" height="4px" id="address2" name="address2" />
+        </td>
+      </tr>
+      <tr>
+        <td class="left">
+          <label for="city">City<span class="red"> *</span></label>
+        </td>
+        <td class="right">
+          <input class="input" type="text" size="35px" height="4px" id="city" name="city" required />
+        </td>
+      </tr>
+      <tr>
+        <td class="left">
+          <label for="state">State<span class="red"> *</span></label>
+        </td>
+        <td class="right">
+          <select class="input" name="state" id="state" required>
+            <option value="select">Select a State</option>
+            <option value="dhaka">Dhaka</option>
+            <option value="rajshahi">Rajshahi</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="left">
+          <label for="zipCode">Zip Code<span class="red"> *</span></label>
+        </td>
+        <td class="right">
+          <input class="input" type="text" size="35px" height="4px" id="zipCode" name="zipCode" required />
+        </td>
+      </tr>
+      <tr>
+        <td class="left">
+          <label for="country">Country<span class="red"> *</span></label>
+        </td>
+        <td class="right">
+          <select class="input" name="country" id="country" required>
+            <option value="select">Select a Country</option>
+            <option value="bd">Bangladesh</option>
+            <option value="in">India</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="left">
+          <label for="phone">Phone</label>
+        </td>
+        <td class="right">
+          <input class="input" type="tel" size="35px" id="phone" name="phone" />
+        </td>
+      </tr>
+      <tr>
+        <td class="left">
+          <label for="fax">Fax</label>
+        </td>
+        <td class="right">
+          <input class="input" type="text" size="35px" height="4px" id="fax" name="fax" />
+        </td>
+      </tr>
+      <tr>
+        <td class="left">
+          <label for="email">Email<span class="red"> *</span></label>
+        </td>
+        <td class="right">
+          <input class="input" type="email" size="35px" height="4px" id="email" name="email" required />
+        </td>
+      </tr>
+      <tr>
+        <td class="left">
+          <label for="amount">Donation Amount<span class="red"> *</span><span class="normal"><br />(Check a button or
+              type in your amount)</span></label>
+        </td>
+        <td class="normal">
+          <input type="radio" id="none" name="amount" value="none" />
+          <label for="none">None</label>
+          <input type="radio" id="50" name="amount" value="50" />
+          <label for="50">$50</label>
+          <input type="radio" id="75" name="amount" value="75" />
+          <label for="75">$75</label>
+          <input type="radio" id="100" name="amount" value="100" />
+          <label for="100">$100</label>
+          <input type="radio" id="250" name="amount" value="250" />
+          <label for="250">$250</label>
+          <input type="radio" id="other" name="amount" value="other" />
+          <label for="other">Other</label><br />
+          <label for="otherAmount"><b>Other Amount $</b></label>
+          <input class="input" size="20px" type="number" id="otherAmount" name="otherAmount" />
+        </td>
+      </tr>
+      <tr>
+        <td class="left">
+          <label for="recurring">Recurring Donation<span class="normal"><br />(Check if yes)</span></label>
+        </td>
+        <td class="right">
+          <input type="checkbox" id="check" name="check" value="check">
+          <label class="normal" for="check"> I am interested in giving on a regular basis.</label><br>
+          <label class="normal" for="card">Monthly Credit Card $</label>
+          <input class="input" size="2px" type="number" id="card" name="card" />
+          <label class="normal" for="month"> For </label>
+          <input class="input" size="1px" type="number" id="month" name="month" /><span class="normal">Months</span>
+        </td>
+      </tr>
+    </table>
+    <h2 class="red">Honorarium and Memorial Donation Information</h2>
+    <table>
+      <tr>
+        <td class="left">
+          <label for="choice">I would like to make this donation</label>
+        </td>
+        <td class="right">
+          <input type="radio" id="honor" name="choice" value="honor" />
+          <label for="honor">To Honor</label><br>
+          <input type="radio" id="memory" name="choice" value="memory" />
+          <label for="memory">In Memory of</label>
+        </td>
+      </tr>
+      <tr>
+        <td class="left">
+          <label for="name">Name</label>
+        </td>
+        <td class="right">
+          <input class="input" type="text" size="35px" id="name" name="name" />
+        </td>
+      </tr>
+      <tr>
+        <td class="left">
+          <label for="to">Acknowledge Donation to</label>
+        </td>
+        <td class="right">
+          <input class="input" type="text" size="35px" id="to" name="to" />
+        </td>
+      </tr>
+      <tr>
+        <td class="left">
+          <label for="address">Address</label>
+        </td>
+        <td class="right">
+          <input class="input" type="text" size="35px" id="address" name="address" />
+        </td>
+      </tr>
+      <tr>
+        <td class="left">
+          <label for="city">City</label>
+        </td>
+        <td class="right">
+          <input class="input" type="text" size="35px" height="4px" id="city" name="city" />
+        </td>
+      </tr>
+      <tr>
+        <td class="left">
+          <label for="state">State</label>
+        </td>
+        <td class="right">
+          <select class="input" name="state" id="state" required>
+            <option value="select">Select a State</option>
+            <option value="dhaka">Dhaka</option>
+            <option value="rajshahi">Rajshahi</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="left">
+          <label for="zipCode">Zip</label>
+        </td>
+        <td class="right">
+          <input class="input" type="text" size="35px" height="4px" id="zipCode" name="zipCode" />
+        </td>
+      </tr>
+    </table>
+    <h2 class="red">Additional Information</h2>
+    <p>Please enter your name, company or organization as you would like to appear in our publications:</p>
+    <table>
+      <tr>
+        <td class="left">
+          <label for="name">Name</label>
+        </td>
+        <td class="right">
+          <input class="input" type="text" size="35px" id="name" name="name" />
+        </td>
+      </tr>
+    </table>
+    <input type="checkbox" id="anonymous" name="info" value="anonymous">
+    <label for="anonymous"> I would like my gift to remain anonymous. </label><br>
+    <input type="checkbox" id="gift" name="info" value="gift">
+    <label for="gift"> My employer offers a matching gift program. I will mail the matching gift form.</label><br>
+    <input type="checkbox" id="letter" name="info" value="letter">
+    <label for="letter"> Please save the cost of acknowledging this gift by not mailing a thank you letter.</label><br>
+    <table>
+      <td class="left">
+        <label for="comment">Comments<span class="normal"><br />(Please type any questions or feedback
+            here.)</span></label>
+      </td>
+      <td class="right">
+        <textarea type="text" id="comment" name="area" value=""></textarea>
+      </td>
+    </table>
+  </form>
+</body>
+<footer>
+</footer>
+
 </html>
