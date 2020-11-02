@@ -1,5 +1,5 @@
 <?php
-$nameErr = "NO ERROR";
+$nameErr = "";
 $name = "INVALID";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
