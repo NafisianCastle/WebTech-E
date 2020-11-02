@@ -13,8 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $name = test_input($_POST["name"]);
     }
-    echo "Name: " . $name . "<br>";
-    echo "Error Message: " . $nameErr;
 }
 function test_input($data)
 {
@@ -41,8 +39,8 @@ function test_input($data)
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" style="width: 30%;">
         <fieldset>
             <legend>Name</legend>
-            <input type="text" id="name" name="name" value="" autofocus required><br>
-            <span class="error"><?php echo $nameError; ?></span><br>
+            <input type="text" id="name" name="name" value="" autofocus><br>
+            <span class="error"><?php echo $nameErr; ?></span><br>
             <hr>
             <input type="submit" value="Submit">
         </fieldset>

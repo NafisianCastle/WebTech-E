@@ -1,21 +1,19 @@
 <?php
-$emailErr = "NO ERROR";
+$emailErr = "";
 $email = "INVALID";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($_POST["email"])) {
-        $emailErr = "Name is required";
-    } else if (!preg_match("/^[a-z ,.'-]+$/i", $_POST["email"])) {
-        $emailErr = "Must start with a letter and can contain a-z, A-Z, period, dash only.";
-    } else if (str_word_count($_POST["email"]) < 2) {
-        $emailErr = "Name should be of at least two words.";
+        $emailErr = "Email is required";
     } else {
         $email = test_input($_POST["email"]);
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $emailErr = "Invalid email format";
+        }
     }
-    echo "Name: " . $email . "<br>";
-    echo "Error Message: " . $emailErr;
 }
+
 function test_input($data)
 {
     $data = trim($data);
@@ -29,7 +27,7 @@ function test_input($data)
 <head>
     <meta charset="UTF-8" />
     <meta email="Viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Name</title>
+    <title>Email</title>
     <style>
         .error {
             color: red;
@@ -40,9 +38,9 @@ function test_input($data)
 <body>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" style="width: 30%;">
         <fieldset>
-            <legend>Name</legend>
-            <input type="email" id="email" email="email" value="" autofocus required><br>
-            <span class="error"><?php echo $emailError; ?></span><br>
+            <legend>Email</legend>
+            <input type="email" id="email" name="email" value="" autofocus><br>
+            <span class="error"><?php echo $emailErr; ?></span><br>
             <hr>
             <input type="submit" value="Submit">
         </fieldset>
