@@ -71,15 +71,13 @@
 </head>
 
 <body>
-
-
-
     <header>
-        <h2>Profile</h2>
+        <h2>X Company</h2>
     </header>
     <section>
         <nav>
-            <h2>Account</h2><hr>
+            <h2>Account</h2>
+            <hr>
             <ul>
                 <li><a href="dashboard.php">Dashboard</a></li>
                 <li><a href="#">View Profile</a></li>
@@ -91,13 +89,13 @@
         </nav>
 
         <article>
-            <h1>Welcome  </h1>
-            
+            <h1>Welcome </h1>
+
         </article>
     </section>
 
     <footer>
-        <p>Copyright &#169;	2017 </p>
+        <p>Copyright &#169; 2017 </p>
     </footer>
 
 </body>
