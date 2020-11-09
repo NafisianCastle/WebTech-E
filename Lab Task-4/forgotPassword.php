@@ -16,7 +16,7 @@
 
         /* Style the header */
         header {
-            background-color: #666;
+            background-color: lightseagreen;
             padding: 30px;
             text-align: center;
             font-size: 35px;
@@ -28,7 +28,7 @@
             float: left;
             width: 20%;
             height: 690px;
-            background: darkgrey;
+            background: lightskyblue;
             padding: 20px;
             shape-outside: -moz-radial-gradient();
         }
@@ -62,7 +62,7 @@
         }
 
         footer {
-            background-color: #777;
+            background-color: lightseagreen;
             padding: 10px;
             text-align: center;
             color: white;
