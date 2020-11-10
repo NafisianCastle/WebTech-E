@@ -89,7 +89,7 @@
         </nav>
 
         <article>
-            <h1>Welcome </h1>
+            <h1>Welcome Bob</h1>
 
         </article>
     </section>

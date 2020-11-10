@@ -81,21 +81,17 @@
         <a href="registration.php">Registration</a>
     </header>
     <section>
-        <nav>
-            <h2>Account</h2>
-            <hr>
-            <ul>
-                <li><a href="dashboard.php">Dashboard</a></li>
-                <li><a href="#">View Profile</a></li>
-                <li><a href="#">Edit Profile</a></li>
-                <li><a href="#">Change Profile Picture</a></li>
-                <li><a href="#">Change Password</a></li>
-                <li><a href="#">Logout</a></li>
-            </ul>
-        </nav>
 
         <article>
-            <h1>Welcome </h1>
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                <fieldset>
+                    <legend>Forgot PASSWORD_BCRYPT</legend>
+                    <label for="email">Enter email</label>
+                    <input type="email" id="email" name="email" value="" required autofocus><br>
+                    <input type="submit" value="Submit">
+
+                </fieldset>
+            </form>
 
         </article>
     </section>
