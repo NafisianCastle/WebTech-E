@@ -92,8 +92,21 @@
         </nav>
 
         <article>
-            <h1>Welcome </h1>
-
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                <fieldset>
+                    <legend>Forgot password</legend>
+                    <label for="currPass">Current Password</label>
+                    <input type="password" id="currPass" name="currPass" value="" required autofocus><br>
+                    <hr>
+                    <label for="newPass">New Password</label>
+                    <input type="password" id="rePass" name="rePass" value="" required><br>
+                    <hr>
+                    <label for="email">Retype New Password</label>
+                    <input type="password" id="rePass" name="rePass" value="" required><br>
+                    <hr>
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
         </article>
     </section>
 

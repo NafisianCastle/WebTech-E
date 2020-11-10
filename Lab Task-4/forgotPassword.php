@@ -85,7 +85,7 @@
         <article>
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 <fieldset>
-                    <legend>Forgot PASSWORD_BCRYPT</legend>
+                    <legend>Forgot password</legend>
                     <label for="email">Enter email</label>
                     <input type="email" id="email" name="email" value="" required autofocus><br>
                     <input type="submit" value="Submit">
