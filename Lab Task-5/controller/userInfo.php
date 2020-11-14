@@ -2,11 +2,11 @@
 
 require_once 'model.php';
 
-function fetchAllStudents()
+function fetchAllUsers()
 {
-	return showAllStudents();
+	return showAllUsers();
 }
-function fetchStudent($id)
+function fetchUser($id)
 {
-	return showStudent($id);
+	return showUser($id);
 }

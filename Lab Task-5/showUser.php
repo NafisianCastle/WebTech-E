@@ -1,7 +1,7 @@
 <?php
-require_once 'controller/studentInfo.php';
+require_once 'controller/userInfo.php';
 
-$student = fetchStudent($_GET['id']);
+$user = fetchUser($_GET['id']);
 
 ?>
 <!DOCTYPE html>
@@ -22,11 +22,11 @@ $student = fetchStudent($_GET['id']);
             <th>Image</th>
         </tr>
         <tr>
-            <td><a href="showStudent.php?id=<?php echo $student['ID'] ?>"><?php echo $student['Name'] ?></a></td>
-            <td><?php echo $student['Surname'] ?></td>
-            <td><?php echo $student['Username'] ?></td>
-            <td><?php echo $student['Password'] ?></td>
-            <td><img width="100px" src="uploads/<?php echo $student['image'] ?>" alt="<?php echo $student['Name'] ?>"></td>
+            <td><a href="showUser.php?id=<?php echo $user['ID'] ?>"><?php echo $user['Name'] ?></a></td>
+            <td><?php echo $user['Surname'] ?></td>
+            <td><?php echo $user['Username'] ?></td>
+            <td><?php echo $user['Password'] ?></td>
+            <td><img width="100px" src="uploads/<?php echo $user['image'] ?>" alt="<?php echo $user['Name'] ?>"></td>
         </tr>
 
     </table>

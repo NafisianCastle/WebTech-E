@@ -4,7 +4,7 @@ function db_conn()
     $servername = "localhost";
     $username = "root";
     $password = "2524";
-    $dbname = "student";
+    $dbname = "project_db";
 
     try {
         $conn = new PDO('mysql:host=' . $servername . ';dbname=' . $dbname . ';charset=utf8', $username, $password);

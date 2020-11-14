@@ -2,7 +2,7 @@
 require_once '../model.php';
 
 
-if (isset($_POST['updateStudent'])) {
+if (isset($_POST['updateUser'])) {
     $data['name'] = $_POST['name'];
     $data['surname'] = $_POST['surname'];
     $data['username'] = $_POST['username'];
@@ -18,10 +18,10 @@ if (isset($_POST['updateStudent'])) {
         echo "Sorry, there was an error uploading your file.";
     }
 
-    if (updateStudent($_POST['id'], $data)) {
+    if (updateUser($_POST['id'], $data)) {
         echo 'Successfully updated!!';
-        //redirect to showStudent
-        header('Location: ../showStudent.php?id=' . $_POST["id"]);
+        //redirect to showUser
+        header('Location: ../showUser.php?id=' . $_POST["id"]);
     }
 } else {
     echo 'You are not allowed to access this page.';

@@ -1,7 +1,7 @@
-<?php 
+<?php
 
 require_once '../model.php';
 
-if (deleteStudent($_GET['id'])) {
-    header('Location: ../showAllStudents.php');
+if (deleteUser($_GET['id'])) {
+    header('Location: ../showAllUsers.php');
 }

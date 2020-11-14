@@ -3,7 +3,7 @@
 require_once 'db_connect.php';
 
 
-function showAllStudents()
+function showAllUsers()
 {
     $conn = db_conn();
     $selectQuery = 'SELECT * FROM `user_info` ';
@@ -16,7 +16,7 @@ function showAllStudents()
     return $rows;
 }
 
-function showStudent($id)
+function showUser($id)
 {
     $conn = db_conn();
     $selectQuery = "SELECT * FROM `user_info` where ID = ?";
@@ -33,7 +33,7 @@ function showStudent($id)
 }
 
 
-function addStudent($data)
+function addUser($data)
 {
     $conn = db_conn();
     $selectQuery = "INSERT into user_info (Name, Surname, Username, Password, image)
@@ -56,7 +56,7 @@ VALUES (:name, :surname, :username, :password, :image)";
 }
 
 
-function updateStudent($id, $data)
+function updateUser($id, $data)
 {
     $conn = db_conn();
     $selectQuery = "UPDATE user_info set Name = ?, Surname = ?, Username = ?, image = ? where ID = ?";
@@ -73,7 +73,7 @@ function updateStudent($id, $data)
     return true;
 }
 
-function deleteStudent($id)
+function deleteUser($id)
 {
     $conn = db_conn();
     $selectQuery = "DELETE FROM `user_info` WHERE `ID` = ?";

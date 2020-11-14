@@ -7,7 +7,7 @@
 
 <body>
 
-  <form action="controller/createStudent.php" method="POST" enctype="multipart/form-data">
+  <form action="controller/createUser.php" method="POST" enctype="multipart/form-data">
     <label for="name">Name:</label><br>
     <input type="text" id="name" name="name"><br>
     <label for="surname">Surname:</label><br>
@@ -17,7 +17,7 @@
     <label for="password">Password:</label><br>
     <input type="password" id="password" name="password"><br>
     <input type="file" name="image"><br><br>
-    <input type="submit" name="createStudent" value="Create">
+    <input type="submit" name="createUser" value="Create">
     <input type="reset">
   </form>
 
