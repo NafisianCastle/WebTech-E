@@ -39,5 +39,7 @@
   </form>
 
 </body>
+<footer>
+</footer>
 
 </html>
