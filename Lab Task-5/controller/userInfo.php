@@ -4,9 +4,9 @@ require_once 'model.php';
 
 function fetchAllUsers()
 {
-	return showAllUsers();
+    return showAllUsers();
 }
 function fetchUser($id)
 {
-	return showUser($id);
+    return showUser($id);
 }
