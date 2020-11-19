@@ -1,5 +1,5 @@
 <?php
-require_once 'controller/UserInfo.php';
+require_once 'controller/userInfo.php';
 
 $Users = fetchAllUsers();
 

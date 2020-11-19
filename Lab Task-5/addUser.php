@@ -31,7 +31,7 @@
       <label for="birthday">Birthday:</label><br>
       <input type="date" id="birthday" name="birthday"><br>
       <label for="password">Password:</label><br>
-      <input type="password" id="password" name="password"><br><br>
+      <input type="password" id="password" name="password"><br><br><hr>
       <input type="submit" name="createUser" value="Create">
       <input type="reset">
     </fieldset>

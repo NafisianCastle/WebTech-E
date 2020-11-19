@@ -6,7 +6,7 @@ require_once 'db_connect.php';
 function showAllUsers()
 {
     $conn = db_conn();
-    $selectQuery = 'SELECT * FROM `user_info` ';
+    $selectQuery = 'SELECT * FROM `user` ';
     try {
         $stmt = $conn->query($selectQuery);
     } catch (PDOException $e) {
@@ -19,7 +19,7 @@ function showAllUsers()
 function showUser($id)
 {
     $conn = db_conn();
-    $selectQuery = "SELECT * FROM `user_info` where ID = ?";
+    $selectQuery = "SELECT * FROM `user` where ID = ?";
 
     try {
         $stmt = $conn->prepare($selectQuery);
@@ -36,7 +36,7 @@ function showUser($id)
 function addUser($data)
 {
     $conn = db_conn();
-    $selectQuery = "INSERT into user_info (Name, Surname, Username, Password, image)
+    $selectQuery = "INSERT into user (Name, Surname, Username, Password, image)
 VALUES (:name, :surname, :username, :password, :image)";
     try {
         $stmt = $conn->prepare($selectQuery);
@@ -59,7 +59,7 @@ VALUES (:name, :surname, :username, :password, :image)";
 function updateUser($id, $data)
 {
     $conn = db_conn();
-    $selectQuery = "UPDATE user_info set Name = ?, Surname = ?, Username = ?, image = ? where ID = ?";
+    $selectQuery = "UPDATE user set Name = ?, Surname = ?, Username = ?, image = ? where ID = ?";
     try {
         $stmt = $conn->prepare($selectQuery);
         $stmt->execute([
@@ -76,7 +76,7 @@ function updateUser($id, $data)
 function deleteUser($id)
 {
     $conn = db_conn();
-    $selectQuery = "DELETE FROM `user_info` WHERE `ID` = ?";
+    $selectQuery = "DELETE FROM `user` WHERE `ID` = ?";
     try {
         $stmt = $conn->prepare($selectQuery);
         $stmt->execute([$id]);
