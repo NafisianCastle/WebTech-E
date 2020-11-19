@@ -17,13 +17,13 @@ $user = fetchUser($_GET['id']);
     <fieldset>
       <legend>Edit User</legend>
       <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name"><br>
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email"><br>
+      <input type="text" id="name" name="name" value="<?php echo $user['name'] ?>"><br>
+      <label for=" email">Email:</label><br>
+      <input type="email" id="email" name="email" value="<?php echo $user['email'] ?>"><br>
       <label for="phone">Phone:</label><br>
-      <input type="text" id="phone" name="phone"><br>
+      <input type="text" id="phone" name="phone" value="<?php echo $user['phone'] ?>"><br>
       <label for="address">Address:</label><br>
-      <input type="text" id="address" name="address"><br>
+      <input type="text" id="address" name="address" value="<?php echo $user['address'] ?>"><br>
       <label for="city">City:</label><br>
       <select name="city" id="city">
         <option value="empty">Select your city:</option>
@@ -37,7 +37,8 @@ $user = fetchUser($_GET['id']);
       <label for="birthday">Birthday:</label><br>
       <input type="date" id="birthday" name="birthday"><br>
       <label for="password">Password:</label><br>
-      <input type="password" id="password" name="password"><br><br><hr>
+      <input type="password" id="password" name="password"><br><br>
+      <hr>
       <input type="submit" name="createUser" value="Create">
       <input type="reset">
     </fieldset>
