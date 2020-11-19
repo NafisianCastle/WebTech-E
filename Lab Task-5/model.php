@@ -87,3 +87,31 @@ function deleteUser($id)
 
     return true;
 }
+function searchProduct($data){
+	$conn = db_conn();
+	if(empty($data))
+	{
+		$selectQuery = "SELECT Name, Selling_price - Buying_Price AS profit FROM products where Name = ?";
+
+    try {
+        $stmt = $conn->prepare($selectQuery);
+        $stmt->execute([$data]);
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    return $row;
+	}
+	else{
+		$selectQuery = "SELECT Name, Selling_price - Buying_Price AS profit FROM products WHERE Displayable = 'Yes' AND CONCAT(Name,Selling_price,Buying_Price,Displayable) LIKE '%".$data."%'";
+	try {
+        $stmt = $conn->query($selectQuery);
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    return $row;
+    }
+}

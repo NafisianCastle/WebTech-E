@@ -15,7 +15,7 @@ $user = fetchUser($_GET['id']);
 
   <form action="controller/updateUser.php" method="POST" enctype="multipart/form-data" style="width:30%;">
     <fieldset>
-      <legend>Add User</legend>
+      <legend>Edit User</legend>
       <label for="name">Name:</label><br>
       <input type="text" id="name" name="name"><br>
       <label for="email">Email:</label><br>
