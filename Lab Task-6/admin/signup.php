@@ -24,29 +24,16 @@ if (isset(($_POST['submit']))) {
         $validateInfo = false;
     }
 
-    if (!empty($_POST["firstName"])) {
+    if (!empty($_POST["name"])) {
         $pattern = '/[\'\/~`\!@#\$%\^&\*\(\)_\-\+=\{\}\[\]\|;:"\<\>,\.\?\\\]/';
-        if (!preg_match('#[0-9]#', $_POST['firstName'])   && !preg_match($pattern, $_POST['firstName'])) {
-            $firstName = htmlspecialchars($_POST['firstName']);
+        if (!preg_match('#[0-9]#', $_POST['name'])   && !preg_match($pattern, $_POST['name'])) {
+            $firstName = htmlspecialchars($_POST['name']);
         } else {
             $firstNameErr = "numbers and special chars not allowed";
             $validateInfo = false;
         }
     } else {
-        $firstNameErr = "Firstname required!";
-        $validateInfo = false;
-    }
-
-    if (!empty($_POST["lastName"])) {
-        $pattern = '/[\'\/~`\!@#\$%\^&\*\(\)_\-\+=\{\}\[\]\|;:"\<\>,\.\?\\\]/';
-        if (!preg_match('#[0-9]#', $_POST['lastName'])   && !preg_match($pattern, $_POST['lastName'])) {
-            $lastName = htmlspecialchars($_POST['lastName']);
-        } else {
-            $lastNameErr = "numbers and special chars not allowed";
-            $validateInfo = false;
-        }
-    } else {
-        $lastNameErr = "Lastname required!";
+        $firstNameErr = "name required!";
         $validateInfo = false;
     }
 
@@ -77,20 +64,20 @@ if (isset(($_POST['submit']))) {
         $validateInfo = false;
     }
     if ($validateInfo) {
-        $conn = new mysqli("localhost", "root", "", "socialsite");
+        $conn = new mysqli("localhost", "root", "2524", "project_db");
 
         if ($conn->connect_error) {
             die("Connection failed: Server Down!!!" . $conn->connect_error);
         }
 
-        $sql = "select username from userinfo where username = '" . $username . "';";
+        $sql = "select username from user where username = '" . $username . "';";
 
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             $usernameErr = "name exists try another name !";
             $validateInfo = false;
         } else {
-            $sql = "insert into userinfo (username,firstname, lastname, password ,dateOfBirth,securityQuestion,gender) values ( '" . $username . "' , '" . $firstName . "', '" . $lastName . "' , '" . $password . "' , '" . $dateOfBirth . "' ,'" . $securityQuestion . "','" . $gender . "' )";
+            $sql = "insert into user (username,name, password ,dateOfBirth,gender) values ( '" . $username . "' , '" . $firstName . "', '" . $lastName . "' , '" . $password . "' , '" . $dateOfBirth . "' ,'" . $securityQuestion . "','" . $gender . "' )";
             $sql2 = "insert into about (username,education,subject,phonenumber,propic,coverpic) values ('" . $username . "', 'N/A','N/A','N/A','blankImage/propic.jpg','blankImage/coverpic.jpg')";
             if ($conn->query($sql) === TRUE) {
                 echo "<script> alert('account created');  </script>";
