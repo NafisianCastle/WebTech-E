@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION['username'])) {
+    session_destroy();
+    header("location:adminlogin.php");
+}
 //require_once 'controllers/adminProfileInfo.php';
 
 //$profile = fetchProfile($_SESSION['username']);
