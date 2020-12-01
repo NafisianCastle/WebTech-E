@@ -1,0 +1,49 @@
+html {
+    background-color: rgb(92, 151, 222);
+}
+
+#login_form_admin {
+    height: 400px;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border: 1px solid transparent;
+    border-radius: 15px;
+    background-color: rgb(218, 218, 218);
+}
+
+.center_align {
+    text-align: center;
+}
+
+.credential_input {
+    margin-top: 30px;
+    margin-left: 65px;
+    min-width: auto;
+}
+
+.credential_input input {
+    width: 250px;
+    border-color: rgba(3, 133, 255, 0.767);
+}
+
+.login_btn input {
+    background-color: rgb(92, 151, 222);
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.upper_txt {
+    margin-top: 5px;
+}
