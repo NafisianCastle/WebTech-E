@@ -1,0 +1,88 @@
+.form-input input button:not(:disabled),
+[type="text"]:not(:disabled),
+[type="password"]:not(:disabled) {
+  width: 300px;
+}
+#col-1 {
+  background-image: url(../images/abc.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(194, 3, 3, 0.692);
+  transition: 0.7s;
+  box-shadow: inset 10px 10px 1000px 0px rgba(245, 210, 9, 0.274);
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#col-2 {
+  left: 50%;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(195, 244, 255, 0.774),
+    rgba(43, 138, 226, 0.822)
+  );
+  overflow-x: hidden;
+}
+
+#createaccountText {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  transition: 0.7s;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.61);
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+#createaccountText:hover {
+  transition: 0.7s;
+  background-color: rgba(255, 255, 255, 0.664);
+  color: black;
+}
+
+#col-1:hover {
+  transition: 0.7s;
+  box-shadow: inset 10px 10px 1000px 0px rgba(9, 84, 245, 0.397);
+}
+
+.sign_up_form {
+  width: 100%;
+  height: 80%;
+  color: black;
+  position: static;
+  transform: translate(35%, 5%);
+  box-sizing: border-box;
+  margin-top: -15px;
+}
+
+#lastNameLabel {
+  position: fixed;
+  margin-left: 86px;
+}
+#firstAndLastName input {
+  width: 138px;
+}
+#lastNameInput {
+  margin-left: 5px;
+  position: fixed;
+}
+
+#signUpBtn input {
+  transition: 0.5s;
+}
+
+#signUpBtn input:hover {
+  transition: 0.5s;
+  background-color: rgb(139, 0, 0);
+}
+
+label {
+  padding: 0px;
+  margin: 0px;
+}
