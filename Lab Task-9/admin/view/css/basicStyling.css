@@ -1,0 +1,175 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+label {
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+.form-input {
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+.form-input input {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  padding: 8px;
+}
+.btn input,
+button {
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  color: azure;
+  background-color: rgb(77, 77, 77);
+}
+
+.btn_success input,
+button {
+  background-color: rgb(17, 202, 0);
+}
+
+.btn_primary input,
+button {
+  background-color: rgb(13, 127, 235);
+}
+
+.btn_danger input,
+button {
+  background-color: rgba(255, 38, 0, 0.829);
+}
+
+input,
+select,
+textarea,
+button {
+  color: rgba(68, 68, 68, 0.795);
+  border: 2px solid transparent;
+  border-radius: 3px;
+}
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+.center_align {
+  text-align: center;
+}
+.text_dark {
+  color: black;
+}
+.text_angel {
+  color: white;
+}
+.text_danger {
+  color: rgb(221, 148, 12);
+}
+.text_success {
+  color: rgb(17, 202, 0);
+}
+.text_error {
+  color: rgb(233, 32, 32);
+}
+.text_primary {
+  color: rgb(34, 130, 255);
+}
+
+.column {
+  position: fixed;
+  width: 50%;
+  left: 0;
+  height: 100%;
+  white-space: wrap;
+}
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.big_font {
+  font-size: 50px;
+}
+.med_font {
+  font-size: 25px;
+}
+.sml_font {
+  font-size: 15px;
+}
+.text_black {
+  color: black;
+}
+.font_bold {
+  font-weight: bolder;
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+  border-radius: 4px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+::-webkit-scrollbar:hover {
+  background: #c6c7ca;
+}
+::-webkit-scrollbar-thumb {
+  background: #777779;
+  border-radius: 4px;
+}
